@@ -1,0 +1,18 @@
+from google.colab import drive
+drive.mount('/content/drive')
+
+
+
+
+!pip install gensim
+
+
+
+
+import gensim
+
+KAMERIO_MODEL =  '/content/drive/My Drive/latest-ja-word2vec-gensim-model/word2vec.gensim.model'
+
+model = gensim.models.Word2Vec.load(KAMERIO_MODEL)
+
+model.most_similar(positive=['仕事','忙しい'])
